@@ -9,3 +9,13 @@ I used the following sites to compile the translation options:
 [Draconic](https://wowpedia.fandom.com/wiki/Draconic)
 
 [Darnassian](https://wowpedia.fandom.com/wiki/Darnassian)
+
+[Dwarven](<https://wowpedia.fandom.com/wiki/Dwarven_(language)>)
+
+[Draenei](<https://wowpedia.fandom.com/wiki/Draenei_(language)>)
+
+## Planned Additions
+
+- Add the ability to create and manage a dictionary of your own per language.
+- Add a check for repeated words, to improve the randomized sentences.
+- Add the ability to handle phrases.
