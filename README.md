@@ -14,6 +14,10 @@ I used the following sites to compile the translation options:
 
 [Draenei](<https://wowpedia.fandom.com/wiki/Draenei_(language)>)
 
+[Thalassian](https://wowpedia.fandom.com/wiki/Thalassian)
+
+[Gnomish](<https://wowpedia.fandom.com/wiki/Gnomish_(language)>)
+
 ## Planned Additions
 
 - Add the ability to create and manage a dictionary of your own per language.
