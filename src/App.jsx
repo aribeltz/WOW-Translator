@@ -2,7 +2,7 @@ import { useState } from "react"
 import { languages } from "src/data/languages"
 import { translateToWowLanguage } from "src/utils/translateToWowLanguage"
 
-const THEME_OPTIONS = ["default", "litch king", "burning crusade"]
+const THEME_OPTIONS = ["default", "lich king", "burning crusade"]
 
 export default function App() {
   const [language, setLanguage] = useState("default")
