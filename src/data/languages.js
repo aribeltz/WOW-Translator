@@ -1,5 +1,5 @@
 export const languages = {
-  draconic: {
+  Draconic: {
     dictionary: {
       once: "Abela",
       devourer: "Dargonax",
@@ -134,7 +134,7 @@ export const languages = {
     ],
     12: ["Zennshinagas"],
   },
-  darnassian: {
+  Darnassian: {
     1: ["A", "D", "E", "I", "N", "O"],
     2: ["Al", "An", "Da", "Do", "Lo", "Ni", "No", "Ri", "Su"],
     3: [
@@ -233,7 +233,7 @@ export const languages = {
       "Thoribas'no'thera",
     ],
   },
-  dwarven: {
+  Dwarven: {
     1: ["A"],
     2: ["Am", "Ga", "Go", "Ke", "Lo", "Ok", "Ta", "Um", "We", "Zu"],
     3: [
@@ -347,7 +347,7 @@ export const languages = {
     14: ["Gosh-algaz-dun", "Scyld-modor-ok"],
     17: ["Haldren-Lo-Modoss"],
   },
-  draenei: {
+  Draenei: {
     1: ["E", "G", "O", "X", "Y"],
     2: ["Az", "Il", "Me", "No", "Re", "Te", "Ul", "Ur", "Xi", "Za", "Ze"],
     3: [

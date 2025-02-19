@@ -1,4 +1,4 @@
-import { languages } from "src/languages"
+import { languages } from "src/data/languages"
 
 export function translateToWowLanguage(sentence, language) {
   function getRandomArrIndex(arr) {
