@@ -124,11 +124,25 @@ body {
   color: var(--text-primary);
 }
 
+svg {
+  font-size: var(--font-lg);
+  min-width: 2.5rem;
+  color: var(--text-primary);
+}
+
 textarea,
 button,
 p,
 select {
   font-size: 1.4rem;
+}
+
+textarea {
+  width: 100%;
+}
+
+.textarea-container {
+  min-width: 50%;
 }
 
 label {
@@ -138,7 +152,7 @@ label {
 
 select,
 button {
-  width: min-content;
+  max-width: min-content;
 }
 
 a {
@@ -147,20 +161,21 @@ a {
 
 header,
 footer {
-  padding: var(--whitespace-md);
-  position: fixed;
-}
-
-header {
-  top: 0;
-  right: 0;
+  width: 100%;
+  padding: var(--whitespace-sm);
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.theme-select {
+  max-width: min-content;
+  margin-left: auto;
 }
 
 .intro {
@@ -169,7 +184,8 @@ header {
 }
 
 .intro h1 {
-  font-family: "Prata", serif;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
   font-size: var(--font-lg);
   color: var(--text-secondary);
   margin-bottom: var(--whitespace-sm);
@@ -181,8 +197,7 @@ header {
 }
 
 .content-box {
-  width: min-content;
-  max-width: 85%;
+  width: 85%;
   background-color: var(--accent-color);
   padding: var(--whitespace-md);
   border-radius: 2rem;
@@ -191,16 +206,18 @@ header {
 }
 
 button {
+  display: block;
   margin: 0 auto;
+  font-size: var(--font-df);
 }
 
 footer {
-  bottom: 0;
-  left: 0;
+  gap: var(--whitespace-sm);
 }
 
 .disclaimer p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-shadow: black 1px 1px;
 }
 
 /* ---------- REUSABLE STYLES ---------- */
@@ -213,4 +230,12 @@ footer {
 .flex-container--column {
   display: flex;
   flex-direction: column;
+}
+
+.margin-btm-sm {
+  margin-bottom: var(--whitespace-sm);
+}
+
+.margin-btm-md {
+  margin-bottom: var(--whitespace-md);
 }

@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import { languages } from "src/data/languages"
 import { translateToWowLanguage } from "src/utils/translateToWowLanguage"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const THEME_OPTIONS = ["default", "lich king", "burning crusade"]
 
@@ -9,7 +11,7 @@ export default function App() {
   const [input, setInput] = useState("")
   const [translation, setTranslation] = useState("")
 
-  const languageOptions = Object.keys(languages)
+  const languageOptions = Object.keys(languages).sort()
   const canSubmit = language !== "default" && input.length > 1
   const showTranslation = translation.length > 0
 
@@ -33,16 +35,18 @@ export default function App() {
   return (
     <div className="container">
       <header>
-        <label htmlFor="theme">Choose a Theme:</label>
-        <select id="theme" name="theme" onChange={handleSetTheme}>
-          {THEME_OPTIONS.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        <div className="theme-select">
+          <label htmlFor="theme">Choose a Theme:</label>
+          <select id="theme" name="theme" onChange={handleSetTheme}>
+            {THEME_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
       </header>
-      <main className="content-box flex-container--column">
+      <main className="content-box ">
         <section className="intro">
           <h1>World of Warcraft Language Translator</h1>
           <p>
@@ -54,22 +58,23 @@ export default function App() {
           </p>
         </section>
 
-        <div>
-          <label htmlFor="language">Select a Language:</label>
-          <select
-            name="language"
-            id="language"
-            value={language}
-            onChange={handleLanguageSelect}
-          >
-            <option value={"default"} disabled>
-              -- select an option --
-            </option>
-            {languageOptions.map((option) => {
-              return <option key={option}>{option}</option>
-            })}
-          </select>
-        </div>
+        <label htmlFor="language">Select a Language:</label>
+        <select
+          name="language"
+          id="language"
+          value={language}
+          onChange={handleLanguageSelect}
+          className="margin-btm-md"
+        >
+          <option value={"default"} disabled>
+            -- select an option --
+          </option>
+          {languageOptions.map((option) => {
+            return <option key={option}>{option}</option>
+          })}
+        </select>
+
+        <label htmlFor="input">Enter your text here:</label>
 
         <textarea
           rows="5"
@@ -78,6 +83,7 @@ export default function App() {
           id="input"
           value={input}
           onChange={handleUserInput}
+          className="margin-btm-md"
         />
 
         <button disabled={!canSubmit} onClick={handleSubmit}>
@@ -109,6 +115,9 @@ export default function App() {
             owners.
           </p>
         </div>
+        <a href="https://github.com/aribeltz/WOW-Translator" target="_blank">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
       </footer>
     </div>
   )
